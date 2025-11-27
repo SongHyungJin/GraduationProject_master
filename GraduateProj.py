@@ -180,7 +180,7 @@ except Exception:
     PidiNetDetector = None
     HAVE_SOFTEDGE = False
 
-ORIGINAL_IMAGE_PATH = r"image/검.png"
+ORIGINAL_IMAGE_PATH = r"image/낫1.png"
 OUTPUT_DIR = "generated_images"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 out_dir = OUTPUT_DIR
@@ -191,10 +191,10 @@ PROMPTBANK_TOKENS_MAX = 60
 PROMPTBANK_DEBUG = False
 
 GUIDANCE_SCALE = 6.0
-PROXY_W, PROXY_H, PROXY_EFF_STEPS = 640, 640, 16
-FULL_W,  FULL_H,  FULL_EFF_STEPS  = 1024, 1024, 25
+PROXY_W, PROXY_H, PROXY_EFF_STEPS = 512, 512, 16
+FULL_W,  FULL_H,  FULL_EFF_STEPS  = 512, 512, 25
 
-SSIM_THRESHOLD = 0.6
+SSIM_THRESHOLD = 0.1
 
 PROXY_W, PROXY_H = 640, 640
 PROXY_STEPS = 12
@@ -1215,7 +1215,7 @@ def ga_population_optimize(
     protected_index: int = 0,
     seed: Optional[int] = GA_RANDOM_SEED,
     pop_size: int = 18,
-    generations: int = 6,
+    generations: int = 1,
     elite_frac: float = 0.2,
     mut_prob: float = 0.25,
     pipe=None, ref_pil=None, control_img=None, control_kind="", has_cn=False, has_ipa=False
